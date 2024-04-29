@@ -1,0 +1,10 @@
+>>> from rest_framework.authtoken.models import Token
+>>> from django.contrib.auth.models import User
+>>> admin = User.objects.get(id=1)
+>>> token = Token.objects.create(user=admin)
+>>> token.key
+'594390153802b78b41c6354c66db8ea85b1afb01'
+
+abc
+@abc1234
+d9ceb6962b37c5ff15ae85eb60bf5177b9521fc7

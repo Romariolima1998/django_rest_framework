@@ -14,6 +14,9 @@ class Curso(Base):
     titulo = models.CharField(max_length=255)
     url = models.URLField(unique=True)
 
+    class Meta:
+        ordering = ['id']
+
     def __str__(self) -> str:
         return self.titulo
 
@@ -29,6 +32,7 @@ class Avaliacao(Base):
     class Meta:
         verbose_name = 'avaliação'
         verbose_name_plural = 'avaliações'
+        ordering = ['id']
 
     def __str__(self) -> str:
         return f'{self.nome} avaliou o curso {self.curso} com nota {self.avaliacao}'
